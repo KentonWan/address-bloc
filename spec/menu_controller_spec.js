@@ -4,6 +4,11 @@ describe("MenuController", () => {
   beforeEach(() => {
     this.menu = new MenuController();
   });
+  describe("#remindMe()", () => {
+    it("should return string Learning is a life-long pursuit", () => {
+      expect(this.menu.remindMe()).toBe("Learning is a life-long pursuit")
+    });
+  });
   describe("#getContactCount()", ()=> {
     it("should return 0 when no contacts are in the book", () => {
       expect(this.menu.getContactCount()).toBe(0);
